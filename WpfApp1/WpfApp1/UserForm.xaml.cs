@@ -50,7 +50,7 @@ namespace WpfApp1
 
         private void BtnBuy_Click(object sender, RoutedEventArgs e)
         {
-           
+           //для вывода
             Manager.MainFrame.Navigate(new AddEditThings((sender as Button).DataContext as thing));
         }
 
