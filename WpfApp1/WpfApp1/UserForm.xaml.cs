@@ -51,7 +51,7 @@ namespace WpfApp1
         private void BtnBuy_Click(object sender, RoutedEventArgs e)
         {
            //для вывода
-            Manager.MainFrame.Navigate(new AddEditThings((sender as Button).DataContext as thing));
+            Manager.MainFrame.Navigate(new BuyPage((sender as Button).DataContext as thing));
         }
 
         private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)

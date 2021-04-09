@@ -230,3 +230,6 @@ C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateRes
 C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.ResolveComReference.cache
+C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\BuyPage.g.cs
+C:\Users\User\Desktop\lavka\WpfApp1\WpfApp1\obj\Debug\BuyPage.baml
