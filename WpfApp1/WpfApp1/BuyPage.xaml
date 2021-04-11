@@ -26,15 +26,15 @@
             <ColumnDefinition Width="191*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Text="Название" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26"  Width="165"></TextBlock>
-        <TextBox Text="{Binding name}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22.667,0.333,22.667"/>
+        <TextBox x:Name="namedata" Text="{Binding name}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22.667,0.333,22.667"/>
         <TextBlock Text="Описание" FontSize="20" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="27" Margin="67,24.333,67.333,23.333" Width="83"></TextBlock>
-        <TextBox Text="{Binding description}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22.333,0.333,23.333"/>
+        <TextBox x:Name="description" Text="{Binding description}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22.333,0.333,23.333"/>
         <TextBlock Text="Количество" TextAlignment="Center" FontSize="20" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="27" Width="156"></TextBlock>
-        <TextBox Text="{Binding count}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,21.667,0.333,23"/>
+        <TextBox x:Name="count" Text="{Binding count}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,21.667,0.333,23"/>
         <TextBlock Text="Состояние" TextAlignment="Center" FontSize="20" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26"  Width="156"></TextBlock>
-        <TextBox Text="{Binding condition}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22,0.333,22.333"/>
+        <TextBox x:Name="condition" Text="{Binding condition}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22,0.333,22.333"/>
         <TextBlock Text="Стоимость" TextAlignment="Center" FontSize="20" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26"  Width="156"></TextBlock>
-        <TextBox Text="{Binding price}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22,0.333,22.333"/>
+        <TextBox x:Name="price" Text="{Binding price}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="217,22,0.333,22.333"/>
         <Button Content="Вывести чек" Name="BtnBuyThing" Click="BtnBuyThing_Click"  Grid.Row="5" FontSize="20" Grid.Column="3" Height="35" Width="145" />
     </Grid>
 </Page>

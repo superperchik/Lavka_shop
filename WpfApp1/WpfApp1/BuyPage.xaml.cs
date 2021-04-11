@@ -21,6 +21,9 @@ namespace WpfApp1
     public partial class BuyPage : Page
     {
         private thing _currentthing = new thing();
+        private string condition_num;
+        private string ConditonString;
+
         public BuyPage(thing selectedthing)
         {
             InitializeComponent();
@@ -28,15 +31,54 @@ namespace WpfApp1
                 _currentthing = selectedthing;
             InitializeComponent();
             DataContext = _currentthing;
+            condition_num = Convert.ToString(condition.Text);
+
+            ConditonString = (condition_num == "1") ? "Плохое": (condition_num == "2") ? "среднее": "отличное" ;
+            
+
         }
 
+        
         private void BtnBuyThing_Click(object sender, RoutedEventArgs e)
         {
+            var allthings = _currentthing.ToString();
             var application = new Word.Application();
             Word.Document document = application.Documents.Add();
-        
+        foreach (var allthing in allthings)
+            {
+                //  Word.Paragraph thingsParagrapth = document.Paragraphs.Add();
+                //  Word.Range thingsRange = thingsParagrapth.Range;
+                //   thingsRange.Text = allthings;
+                // thingsRange.InsertParagraphAfter();
+                Word.Paragraph tableParagraph = document.Paragraphs.Add();
+                Word.Range tableRange = tableParagraph.Range;
+                Word.Table paymentsTable = document.Tables.Add(tableRange, 1, 2);
+                paymentsTable.Borders.InsideLineStyle = paymentsTable.Borders.OutsideLineStyle
+                    = Word.WdLineStyle.wdLineStyleSingle;
+                paymentsTable.Range.Cells.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+
+                Word.Range CellRange;
+                CellRange = paymentsTable.Cell(1, 1).Range;
+                CellRange.Text = "Название";
+                CellRange = paymentsTable.Cell(1, 2).Range;
+                CellRange.Text = Convert.ToString(namedata.Text);
+                CellRange = paymentsTable.Cell(2, 1).Range;
+                CellRange.Text = "Описание";
+                CellRange = paymentsTable.Cell(2, 2).Range;
+                CellRange.Text = Convert.ToString(description.Text); ;
+                CellRange = paymentsTable.Cell(3, 1).Range;
+                CellRange.Text = "Состояние";
+                CellRange = paymentsTable.Cell(3, 2).Range;
+                CellRange.Text = ConditonString;
+                CellRange = paymentsTable.Cell(4, 1).Range;
+                CellRange.Text = "Цена";
+                CellRange = paymentsTable.Cell(4, 2).Range;
+                CellRange.Text = Convert.ToString(price.Text); ;
+
+            }
                 Word.Paragraph paragraph = document.Paragraphs.Add();
                 Word.Range range = paragraph.Range;
+               
             application.Visible = true;
             document.SaveAs2(@"D:\Test.docx");
         
